@@ -27,27 +27,27 @@
                 <h3>Rekomendasi</h3>
                 <div class="col">
                     <a href="">
-                        <img src="assets/img/Buku.png" alt="" srcset="">
+                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
                     </a>
                 </div>
                 <div class="col">
                     <a href="">
-                        <img src="assets/img/Buku.png" alt="" srcset="">
+                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
                     </a>
                 </div>
                 <div class="col">
                     <a href="">
-                        <img src="assets/img/Buku.png" alt="" srcset="">
+                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
                     </a>
                 </div>
                 <div class="col">
                     <a href="">
-                        <img src="assets/img/Buku.png" alt="" srcset="">
+                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
                     </a>
                 </div>
                 <div class="col">
                     <a href="">
-                        <img src="assets/img/Buku.png" alt="" srcset="">
+                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
                     </a>
                 </div>
             </div>
