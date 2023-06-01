@@ -18,4 +18,6 @@ use App\Http\Controllers\LandingController;
 //     return view('welcome');
 // });
 
+Route::get('login', [LandingController::class, 'login'])->name('pages.login');
+Route::get('signup', [LandingController::class, 'signup'])->name('pages.registrasi');
 route::resource('/', LandingController::class);

@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="homepage.html">Home</a>
+                    <a class="nav-link" aria-current="page" href=" route('index') ">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Features</a>
@@ -18,8 +18,8 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <a href="registrasi.html" class="btn me-3" id="tombol-1">Daftar</a>
-                <a href="login.html" class="btn btn-primary me-2">Masuk</a>
+                <a href="{{ route('pages.registrasi') }}" class="btn me-3" id="tombol-1">Daftar</a>
+                <a href="{{ route('pages.login') }}" class="btn btn-primary me-2">Masuk</a>
             </div>
         </div>
     </div>

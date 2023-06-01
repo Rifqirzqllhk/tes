@@ -61,4 +61,15 @@ class LandingController extends Controller
     {
         //
     }
+
+    // Login/Masuk
+    public function login()
+    {
+        return view('pages.login');
+    }
+    // Registrasi/Daftar
+    public function signup()
+    {
+        return view('pages.registrasi');
+    }
 }
