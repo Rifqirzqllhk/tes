@@ -20,7 +20,8 @@ use App\Http\Controllers\UserController;
 // route umum
 Route::get('/', [BukuController::class, 'index']);
 Route::get('/login', [LandingController::class, 'login'])->name('pages.login');
-Route::get('/signup', [LandingController::class, 'signup'])->name('pages.registrasi');
+Route::view('/signup', 'pages.registrasi')->name('pages.registrasi');
+Route::post('/signed', [UserController::class, 'create']);
 Route::post('/prosesLogin', [UserController::class, 'cekUser']);
 Route::get('/logout', [UserController::class, 'logout']);
 
@@ -31,9 +32,10 @@ Route::get('/admin/addBuku', [BukuController::class, 'create']);
 Route::post('/admin/store', [BukuController::class, 'store']);
 Route::post('/admin/edit/{id}', [BukuController::class, 'edit']);
 Route::post('/admin/edit', [BukuController::class, 'update']);
-Route::post('/admin/edit', [BukuController::class, 'update']);
 Route::post('/delete/{id}', [BukuController::class, 'destroy']);
-Route::view('/setUser', 'pages.adminsetUser');
+
+Route::get('/setUser', [UserController::class, 'getAlluser']);
+Route::post('/delete/user/{id}', [userController::class, 'destroy']);
 
 // routing genre
 Route::get('/drama', [GenreController::class, 'indexDrama']);

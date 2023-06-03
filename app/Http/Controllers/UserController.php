@@ -49,7 +49,7 @@ class UserController extends Controller
         $data = [
             'users' => user::all(),
         ];
-        return view('halaman-admin-getAllUser',$data);
+        return view('pages.adminsetUser',$data);
     }
 
     public function setIsAdmin($id)
@@ -68,5 +68,18 @@ class UserController extends Controller
     {
         user::destroy($id);
         return redirect('/admin/allUser')->with('success', 'user berhasil dihapus');
+    }
+
+    public function create(Request $request)
+    {
+        $inputUser = new User;
+
+        $inputUser->name = $request->input('name');
+        $inputUser->email = $request->input('email');
+        $inputUser->password = $request->input('password');
+        $inputUser->user_type = $request->input('user_type', 'user');
+
+        $inputUser->save();
+        return redirect('/login')->with('success', 'Berhasil mendaftar');
     }
 }

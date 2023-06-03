@@ -36,10 +36,6 @@
                         </a>
                     </div>
                 @endforeach
-                {{-- @php
-                    dd($bukus);
-                @endphp --}}
-
             </div>
         </div>
     </section>

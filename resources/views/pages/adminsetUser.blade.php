@@ -5,37 +5,49 @@
 
 @section('content')
 
-<section class="container-md mt-3">
-    <h2>Menu User</h2>
-    <div class="row">
-        <div class="col">
-            <table class="table table-hover">
-                <thead class="table-active">
+    <div class="container mt-3" style="min-height: 560px;">
+        @if (\Session::has('success'))
+            <div class="alert alert-success">
+                {!! \Session::get('success') !!}
+            </div>
+        @endif
+        {{-- <a href="/admin/addUser" class="btn btn-primary mb-2">Tambah User</a> --}}
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">email</th>
+                    <th scope="col">User type</th>
+                    <th scope="col">Option</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach ($users as $user)
                     <tr>
-                        <th class="text-center">ID</th>
-                        <th class="text-center">Email</th>
-                        <th class="text-center">Nama</th>
-                        <th class="text-center">Tipe User</th>
-                        <th class="text-center">Menu</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td class="text-center">
-                            <button class="btn btn-warning">Transaction</button>
-                            <button class="btn btn-info">Edit</button>
-                            <button class="btn btn-danger">Delete</button>
+                        <th scope="row" style="vertical-align: middle">{{ $user->id }}</th>
+                        <td style="vertical-align: middle">{{ $user->name }}</td>
+                        <td style="vertical-align: middle">{{ $user->email }}</td>
+                        <td style="vertical-align: middle">{{ $user->user_type }}</td>
+                        <td style="vertical-align: middle">
+                            @if ($user->user_type != 'admin')
+                                <form action="/edit/isadmin/{{ $user->id }}" method="POST" class="d-inline">
+                                    @csrf
+                                    <button class="btn btn-warning">set admin</button>
+                                </form>
+                                <form action="/delete/user/{{ $user->id }}" method="POST" class="d-inline"
+                                    onclick="return confirm('Yakin?')">
+                                    @csrf
+                                    <button class="btn btn-danger">Delete</button>
+                                </form>
+                            @endif
+                            <a href="/admin/transaction/{{ $user->id }}" class="btn btn-primary">transactions</a>
                         </td>
                     </tr>
-                </tbody>
-            </table>
-        </div>
+                @endforeach
+            </tbody>
+        </table>
     </div>
-</section>
 
 @endsection
 
