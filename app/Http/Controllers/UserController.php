@@ -14,14 +14,16 @@ class UserController extends Controller
         $email = $_POST['email'];
         $password = $_POST['password'];
         $user = user::where('email', $email)->first();
-        if ($user->password == $password) {
-            Session::put('user_id', $user->id);
-            if ($user->user_type == 'admin') {
-                Session::put('admin', true);
-                return redirect('/admin');
+        if(!is_null($user)){
+            if ($user->password == $password) {
+                Session::put('user_id', $user->id);
+                if ($user->user_type == 'admin') {
+                    Session::put('admin', true);
+                    return redirect('/admin');
+                }
+                return redirect('/');
             }
-            return redirect('/');
-        } else {
+        }else {
             return redirect('/login');
         }
     }
