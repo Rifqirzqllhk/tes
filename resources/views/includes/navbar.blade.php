@@ -15,8 +15,9 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Genre</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="genreDrama.html">Drama</a>
-                        <a class="dropdown-item" href="#">Horror</a>
+                        <a class="dropdown-item" href="/drama">Drama</a>
+                        <a class="dropdown-item" href="/horror">Horror</a>
+                        <a class="dropdown-item" href="/action">Action</a>
                     </div>
                 </li>
             </ul>
