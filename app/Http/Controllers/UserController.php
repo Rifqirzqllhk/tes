@@ -31,7 +31,7 @@ class UserController extends Controller
     public function logout()
     {
         Session::flush();
-        return redirect('/login');
+        return redirect('/');
     }
 
     public function indexAdmin()
@@ -61,13 +61,13 @@ class UserController extends Controller
             $setAdmin->user_type = 'user';
         }
         $setAdmin->save();
-        return redirect('/admin/allUser')->with('success', 'credential berhasil diupdate');
+        return redirect('/setUser')->with('success', 'credential berhasil diupdate');
     }
 
     public function destroy($id)
     {
         user::destroy($id);
-        return redirect('/admin/allUser')->with('success', 'user berhasil dihapus');
+        return redirect('/setUser')->with('success', 'user berhasil dihapus');
     }
 
     public function create(Request $request)

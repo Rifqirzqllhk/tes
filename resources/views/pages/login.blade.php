@@ -32,7 +32,7 @@
                                     </div>
                                 </form>
                                 <div>
-                                    <p class="mb-0  text-center">Belum punya akun? <a href="registrasi.html"
+                                    <p class="mb-0  text-center">Belum punya akun? <a href="/signup"
                                             class="text-primary fw-bold">Daftar</a></p>
                                 </div>
 

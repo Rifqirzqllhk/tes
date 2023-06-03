@@ -36,6 +36,7 @@ Route::post('/delete/{id}', [BukuController::class, 'destroy']);
 
 Route::get('/setUser', [UserController::class, 'getAlluser']);
 Route::post('/delete/user/{id}', [userController::class, 'destroy']);
+Route::post('/edit/isadmin/{id}', [userController::class, 'setIsAdmin']);
 
 // routing genre
 Route::get('/drama', [GenreController::class, 'indexDrama']);
