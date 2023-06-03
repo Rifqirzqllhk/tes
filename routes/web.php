@@ -28,3 +28,5 @@ Route::get('signup', [LandingController::class, 'signup'])->name('pages.registra
 Route::post('prosesLogin', [UserController::class, 'cekUser']);
 
 Route::get('logout', [UserController::class, 'logout']);
+
+Route::get('admin', [UserController::class, 'indexAdmin']);

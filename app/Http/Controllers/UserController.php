@@ -39,7 +39,7 @@ class UserController extends Controller
         $data = [
             'Buku' => Buku::all()
         ];
-        return view('halaman-admin', $data);
+        return view('pages.admin', $data);
     }
 
     // Session index admin belum jalan
