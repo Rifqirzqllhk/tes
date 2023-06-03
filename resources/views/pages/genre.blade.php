@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row pt-5">
             <div class="col">
-                <h1>Genre</h1>
+                <h1>{{$title}}</h1>
             </div>
             <div class="col d-flex">
                 <div class="input-group center">
@@ -28,31 +28,14 @@
 <section>
     <div class="container py-4">
         <div class="row">
+            @foreach ($bukus as $Buku)
             <div class="col">
-                <a href="">
+                <a href="/detail/{{ $Buku->id }}">
                     <img src="assets/img/Buku.png" alt="" srcset="" />
+                    <p>{{ $buku->title }}</p>
                 </a>
             </div>
-            <div class="col">
-                <a href="">
-                    <img src="assets/img/Buku.png" alt="" srcset="" />
-                </a>
-            </div>
-            <div class="col">
-                <a href="">
-                    <img src="assets/img/Buku.png" alt="" srcset="" />
-                </a>
-            </div>
-            <div class="col">
-                <a href="">
-                    <img src="assets/img/Buku.png" alt="" srcset="" />
-                </a>
-            </div>
-            <div class="col">
-                <a href="">
-                    <img src="assets/img/Buku.png" alt="" srcset="" />
-                </a>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
