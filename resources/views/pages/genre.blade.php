@@ -31,8 +31,8 @@
             @foreach ($bukus as $Buku)
             <div class="col">
                 <a href="/detail/{{ $Buku->id }}">
-                    <img src="assets/img/Buku.png" alt="" srcset="" />
-                    <p>{{ $buku->title }}</p>
+                    <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
+                    <p>{{ $Buku->title }}</p>
                 </a>
             </div>
             @endforeach
