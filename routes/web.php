@@ -31,6 +31,8 @@ Route::get('/admin/addBuku', [BukuController::class, 'create']);
 Route::post('/admin/store', [BukuController::class, 'store']);
 Route::post('/admin/edit/{id}', [BukuController::class, 'edit']);
 Route::post('/admin/edit', [BukuController::class, 'update']);
+Route::post('/admin/edit', [BukuController::class, 'update']);
+Route::post('/delete/{id}', [BukuController::class, 'destroy']);
 Route::view('/setUser', 'pages.adminsetUser');
 
 // routing genre
