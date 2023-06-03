@@ -29,7 +29,7 @@ class BukuController extends Controller
      */
     public function create()
     {
-        return view('halaman-admin-addBuku', [
+        return view('pages.adminaddBuku', [
             'genres' => Genre::all()
         ]);
     }

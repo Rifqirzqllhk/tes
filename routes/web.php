@@ -27,8 +27,10 @@ Route::get('/logout', [UserController::class, 'logout']);
 // route admin
 Route::view('/admin', 'pages.adminIndex');
 Route::get('/setBuku', [UserController::class, 'indexAdmin']);
-Route::view('/setUser', 'pages.adminsetUser');
+Route::get('/admin/store', [UserController::class, 'store']);
 Route::get('/admin/addBuku', [BukuController::class, 'create']);
+Route::view('/setUser', 'pages.adminsetUser');
+
 
 // routing genre
 Route::get('/drama', [GenreController::class, 'indexDrama']);
