@@ -21,7 +21,7 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <a class="nav-link" href="/logout">Logout</a>
+                <a href="#" class="navbar-nav nav-item nav-link" aria-current="page">Logout</a>
             </div>
         </div>
     </div>
