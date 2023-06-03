@@ -15,14 +15,13 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Menu Admin</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/drama">Drama</a>
-                        <a class="dropdown-item" href="/horror">Horror</a>
-                        <a class="dropdown-item" href="/action">Action</a>
+                        <a class="dropdown-item" href="/setUser">Atur User</a>
+                        <a class="dropdown-item" href="/setBuku">Atur Buku</a>
                     </div>
                 </li>
             </ul>
             <div class="d-flex">
-                <a href="#" class="navbar-nav nav-item nav-link" aria-current="page">logout</a>
+                <a href="/logout" class="navbar-nav nav-item nav-link" aria-current="page">logout</a>
             </div>
         </div>
     </div>

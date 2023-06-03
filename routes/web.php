@@ -17,22 +17,22 @@ use App\Http\Controllers\UserController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
+// route umum
 Route::get('/', [BukuController::class, 'index']);
-Route::get('login', [LandingController::class, 'login'])->name('pages.login');
-Route::get('signup', [LandingController::class, 'signup'])->name('pages.registrasi');
+Route::get('/login', [LandingController::class, 'login'])->name('pages.login');
+Route::get('/signup', [LandingController::class, 'signup'])->name('pages.registrasi');
+Route::post('/prosesLogin', [UserController::class, 'cekUser']);
+Route::get('/logout', [UserController::class, 'logout']);
 
-Route::post('prosesLogin', [UserController::class, 'cekUser']);
+// route admin
+Route::view('/admin', 'pages.adminIndex');
+Route::get('/setBuku', [UserController::class, 'indexAdmin']);
+Route::view('/setUser', 'pages.adminsetUser');
+Route::get('/admin/addBuku', [BukuController::class, 'create']);
 
-Route::get('logout', [UserController::class, 'logout']);
-
-Route::get('admin', [UserController::class, 'indexAdmin']);
-
+// routing genre
 Route::get('/drama', [GenreController::class, 'indexDrama']);
-
 Route::get('/horror', [GenreController::class, 'indexHorror']);
-
 Route::get('/action', [GenreController::class, 'indexAction']);
+
+
