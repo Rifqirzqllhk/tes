@@ -18,7 +18,8 @@
                 </li>
             </ul>
             <div class="d-flex">
-                <a class="nav-link" href="/logout">Logout</a>
+                <a href="{{ route('pages.registrasi') }}" class="btn me-3" id="tombol-1">Daftar</a>
+                <a href="{{ route('pages.login') }}" class="btn btn-primary me-2">Masuk</a>
             </div>
         </div>
     </div>

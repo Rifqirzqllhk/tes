@@ -2,9 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LandingController;
-use App\Http\Controllers\BukuController;
-use App\Http\Controllers\GenreController;
-use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +18,14 @@ use App\Http\Controllers\UserController;
 //     return view('welcome');
 // });
 
-Route::get('/', [BukuController::class, 'index']);
 Route::get('login', [LandingController::class, 'login'])->name('pages.login');
 Route::get('signup', [LandingController::class, 'signup'])->name('pages.registrasi');
+Route::resource('/', LandingController::class);
 
-Route::post('prosesLogin', [UserController::class, 'cekUser']);
+Route::get('/login', function () {
+    return view('pages.login');
+});
 
-Route::get('logout', [UserController::class, 'logout']);
+Route::post('/prosesLogin', [UserController::class, 'cekUser']);
+
+Route::get('/logout', [UserController::class, 'logout']);

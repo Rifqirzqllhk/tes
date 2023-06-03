@@ -25,31 +25,19 @@
         <div class="container py-4">
             <div class="row">
                 <h3>Rekomendasi</h3>
+                @foreach ($bukus as $Buku)
                 <div class="col">
+                    <a href="/detail/{{ $Buku->id }}">
+                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
+                        <p>{{$Buku->title }}</p>
+                    </a>
+                </div>
+                @endforeach
+                {{-- <div class="col">
                     <a href="">
                         <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
                     </a>
-                </div>
-                <div class="col">
-                    <a href="">
-                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="">
-                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="">
-                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="">
-                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
-                    </a>
-                </div>
+                </div> --}}
             </div>
         </div>
     </section>

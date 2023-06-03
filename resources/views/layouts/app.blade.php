@@ -13,7 +13,13 @@
 </head>
 
 <body>
-    @include('includes.navbar')
+    @if (Session::has('admin'))
+        @include('includes.navbar-admin')
+    @elseif(Session::has('user_id'))
+        @include('includes.navbar')
+    @else
+        @include('includes.navbar-login')
+    @endif
     @yield('content')
     @include('includes.footer')
 
