@@ -30,3 +30,9 @@ Route::post('prosesLogin', [UserController::class, 'cekUser']);
 Route::get('logout', [UserController::class, 'logout']);
 
 Route::get('admin', [UserController::class, 'indexAdmin']);
+
+Route::get('/drama', [GenreController::class, 'indexDrama']);
+
+Route::get('/horror', [GenreController::class, 'indexHorror']);
+
+Route::get('/action', [GenreController::class, 'indexAction']);

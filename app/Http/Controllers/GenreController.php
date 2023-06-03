@@ -10,30 +10,30 @@ class GenreController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function indexAction()
-    {
-        $data = [
-            'bukus' => Genre::where('id', 1)->first()->bukus,
-            'title' => 'Action Comics'
-        ];
-        return view('halaman-komik-per-genre', $data);
-    }
-
-    public function indexAdventure()
-    {
-        $data = [
-            'bukus' => Genre::where('id', 2)->first()->bukus,
-            'title' => 'Adventure Comics'
-        ];
-        return view('halaman-komik-per-genre', $data);
-    }
-
     public function indexDrama()
     {
         $data = [
-            'bukus' => Genre::where('id', 3)->first()->bukus,
-            'title' => 'Drama Comics'
+            'bukus' => Genre::where('id', 1)->first()->bukus,
+            'title' => 'Novel Drama'
         ];
-        return view('halaman-komik-per-genre', $data);
+        return view('pages.genre', $data);
+    }
+
+    public function indexHorror()
+    {
+        $data = [
+            'bukus' => Genre::where('id', 2)->first()->bukus,
+            'title' => 'Buku Horror'
+        ];
+        return view('pages.genre', $data);
+    }
+
+    public function indexAction()
+    {
+        $data = [
+            'bukus' => Genre::where('id', 3)->first()->bukus,
+            'title' => 'Buku Action'
+        ];
+        return view('pages.genre', $data);
     }
 }
