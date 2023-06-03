@@ -49,14 +49,12 @@ class BukuController extends Controller
         $inputBuku->synopsis = $request->input('synopsis');
         $inputBuku->genre_id = $request->input('genre_id');
         $inputBuku->price = $request->input('price');
-        $inputBuku->rate = $request->input('rate');
         $inputBuku->cover = 'defaultimg.jpg';
         if ($cover!=null) {
             $inputBuku->cover = $cover->getClientOriginalName();
             $tujuan_upload = 'assets/img/';
             $cover->move($tujuan_upload, $cover->getClientOriginalName());
         }
-
 
         $inputBuku->save();
         return redirect('/admin')->with('success', 'Buku berhasil ditambahkan');
@@ -82,10 +80,10 @@ class BukuController extends Controller
     public function edit($id)
     {
         $data = [
-            "bukus" => Buku::where('id', $id)->first(),
-            'Genres' => Buku::all()
+            'bukus' => buku::where('id', $id)->first(),
+            'genres' => genre::all()
         ];
-        return view('halaman-admin-editKomik', $data);
+        return view('pages.admineditBuku', $data);
     }
 
     /**
@@ -110,7 +108,6 @@ class BukuController extends Controller
             'cover' => $namaCover,
             'genre_id' => $request->input('genre_id'),
             'price' => $request->input('price'),
-            'rate' => $request->input('rate')
         ];
         Buku::where('id', $id)->update($data);
         return redirect('/admin')->with('success', 'Buku berhasil diedit');

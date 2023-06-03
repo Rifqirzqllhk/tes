@@ -37,7 +37,7 @@
                         </td>
                         <td style="vertical-align: middle">Rp {{ $buku->price }}</td>
                         <td style="vertical-align: middle">
-                            <form action="/edit/{{ $buku->id }}" method="POST" class="d-inline">
+                            <form action="/admin/edit/{{ $buku->id }}" method="POST" class="d-inline">
                                 @csrf
                                 <button class="btn btn-warning">Edit</button>
                             </form>

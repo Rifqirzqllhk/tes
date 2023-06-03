@@ -25,12 +25,13 @@ Route::post('/prosesLogin', [UserController::class, 'cekUser']);
 Route::get('/logout', [UserController::class, 'logout']);
 
 // route admin
-Route::view('/admin', 'pages.adminIndex');
+Route::get('/admin', [BukuController::class, 'index']);
 Route::get('/setBuku', [UserController::class, 'indexAdmin']);
-Route::get('/admin/store', [UserController::class, 'store']);
 Route::get('/admin/addBuku', [BukuController::class, 'create']);
+Route::post('/admin/store', [BukuController::class, 'store']);
+Route::post('/admin/edit/{id}', [BukuController::class, 'edit']);
+Route::post('/admin/edit', [BukuController::class, 'update']);
 Route::view('/setUser', 'pages.adminsetUser');
-
 
 // routing genre
 Route::get('/drama', [GenreController::class, 'indexDrama']);
