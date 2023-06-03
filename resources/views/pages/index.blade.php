@@ -33,11 +33,6 @@
                     </a>
                 </div>
                 @endforeach
-                {{-- <div class="col">
-                    <a href="">
-                        <img src="{{ asset('assets/img/Buku.png')}}" alt="" srcset="">
-                    </a>
-                </div> --}}
             </div>
         </div>
     </section>

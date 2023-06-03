@@ -13,7 +13,7 @@ class GenreController extends Controller
     public function indexDrama()
     {
         $data = [
-            'bukus' => Genre::where('id', 1)->first()->bukus,
+            'bukus' => Genre::where('id', 1)->first()->buku,
             'title' => 'Novel Drama'
         ];
         return view('pages.genre', $data);
@@ -22,7 +22,7 @@ class GenreController extends Controller
     public function indexHorror()
     {
         $data = [
-            'bukus' => Genre::where('id', 2)->first()->bukus,
+            'bukus' => genre::where('id', 2)->first()->buku,
             'title' => 'Buku Horror'
         ];
         return view('pages.genre', $data);
@@ -31,7 +31,7 @@ class GenreController extends Controller
     public function indexAction()
     {
         $data = [
-            'bukus' => Genre::where('id', 3)->first()->bukus,
+            'bukus' => genre::where('id', 3)->first()->buku,
             'title' => 'Buku Action'
         ];
         return view('pages.genre', $data);

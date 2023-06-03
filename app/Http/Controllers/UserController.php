@@ -37,7 +37,7 @@ class UserController extends Controller
     public function indexAdmin()
     {
         $data = [
-            'Buku' => Buku::all()
+            'bukus' => Buku::all()
         ];
         return view('pages.admin', $data);
     }
