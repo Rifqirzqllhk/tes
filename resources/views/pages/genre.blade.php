@@ -11,15 +11,17 @@
                 <div class="col">
                     <h1>{{ $title }}</h1>
                 </div>
-                <div class="col d-flex">
-                    <div class="input-group center">
-                        <input type="text" class="form-control" placeholder="Cari buku disini..." />
-                        <div class="input-group-append">
-                            <button class="btn btn-secondary" type="button">
-                                <i class="fa fa-search"></i>
-                            </button>
+                <div class="col d-flex justify-content-end">
+                    <form action="/" method="get">
+                        <div class="input-group">
+                            <input type="text" class="form-control" size="50" placeholder="Cari buku disini..." name="search"/>
+                            <div class="input-group-append">
+                                <button class="btn btn-secondary" type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
