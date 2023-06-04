@@ -42,5 +42,3 @@ Route::post('/edit/isadmin/{id}', [userController::class, 'setIsAdmin']);
 Route::get('/drama', [GenreController::class, 'indexDrama']);
 Route::get('/horror', [GenreController::class, 'indexHorror']);
 Route::get('/action', [GenreController::class, 'indexAction']);
-
-

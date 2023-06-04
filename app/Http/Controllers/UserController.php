@@ -14,7 +14,7 @@ class UserController extends Controller
         $email = $_POST['email'];
         $password = $_POST['password'];
         $user = user::where('email', $email)->first();
-        if(!is_null($user)){
+        if (!is_null($user)) {
             if ($user->password == $password) {
                 Session::put('user_id', $user->id);
                 if ($user->user_type == 'admin') {
@@ -23,7 +23,7 @@ class UserController extends Controller
                 }
                 return redirect('/');
             }
-        }else {
+        } else {
             return redirect('/login');
         }
     }
@@ -49,7 +49,7 @@ class UserController extends Controller
         $data = [
             'users' => user::all(),
         ];
-        return view('pages.adminsetUser',$data);
+        return view('pages.adminsetUser', $data);
     }
 
     public function setIsAdmin($id)
