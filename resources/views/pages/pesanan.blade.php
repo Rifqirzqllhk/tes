@@ -18,6 +18,7 @@
                     <th scope="col">Judul Buku</th>
                     <th scope="col">Genre</th>
                     <th scope="col">Cover</th>
+                    <th scope="col">Quantity</th>
                     <th scope="col">Harga</th>
                     <th scope="col">Receipt</th>
                 </tr>
@@ -30,9 +31,10 @@
                         <td scope="col">{{ $pesanan->user->email }}</td>
                         <td scope="col">{{ $pesanan->buku->title }}</td>
                         <td scope="col">{{ $pesanan->buku->genre->genre }}</td>
-                        <td scope="col"><img src="img/{{ $pesanan->buku->cover }}" alt="" style="width: 50\px;">
+                        <td scope="col"><img src="/img/{{ $pesanan->buku->cover }}" alt="" style="width: 50\px;">
                         </td>
-                        <td scope="col">Rp {{ $pesanan->buku->price }}</td>
+                        <td scope="col">{{ $pesanan->quantity }}</td>
+                        <td scope="col">Rp {{ $pesanan->buku->price}}</td>
                         <td scope="col"><a class="btn btn-success" href="/invoice/{{ $pesanan->id }}">Print</a></td>
                     </tr>
                 @endforeach
