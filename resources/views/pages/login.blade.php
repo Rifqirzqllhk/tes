@@ -7,7 +7,7 @@
 
     <section>
         <div class="vh-80 d-flex justify-content-center align-items-center">
-            <div class="container">
+            <div class="container vh-100">
                 <div class="row d-flex justify-content-center">
                     <div class="col-12 col-md-8 col-lg-6">
                         <div class="card bg-white">

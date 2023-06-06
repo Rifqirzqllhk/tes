@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container vh-100">
         <div class="col-lg-8 mx-auto mt-3">
             <h1 class="text-center">Tambah Buku</h1>
             <form action="/admin/store" method="POST" enctype="multipart/form-data">
