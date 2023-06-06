@@ -28,7 +28,7 @@
     </section>
 
     <section>
-        <div class="container py-4">
+        <div class="container py-4 vh-100">
             <div class="row">
                 @foreach ($bukus as $Buku)
                     <div class="col">

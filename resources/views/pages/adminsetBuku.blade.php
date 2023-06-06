@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <div class="container mt-3" style="min-height: 560px;">
+    <div class="container mt-3 vh-100" style="min-height: 560px;">
         @if (\Session::has('success'))
             <div class="alert alert-success">
                 {!! \Session::get('success') !!}

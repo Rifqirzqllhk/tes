@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <div class="container">
+    <div class="container vh-100">
         <div class="col-lg-8 mx-auto mt-3">
             <h1 class="text-center">Edit Buku</h1>
             <form action="/admin/edit" method="POST" enctype="multipart/form-data">
@@ -50,7 +50,7 @@
                     <input type="number" class="form-control" id="form-price" name="price" value="{{ $bukus->price }}">
                 </div>
 
-                <div class=" my-3 text-center">
+                <div class="my-3 text-center">
                     <button type="submit" class="btn btn-primary" value="submit">Edit</button>
                 </div>
             </form>

@@ -6,7 +6,7 @@
 @section('content')
 
 <section class="bg-primary">
-    <div class="container">
+    <div class="container vh-100">
         <div class="row pt-5">
             <h2 class="text-center text-white">Selamat Datang</h2>
         </div>
