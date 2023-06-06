@@ -14,7 +14,7 @@ class PesananController extends Controller
             $data = [
                 'pesanans' => pesanan::where('user_id', Session::get('user_id'))->get()
             ];
-            return view('pesanan', $data);
+            return view('pages.pesanan', $data);
         }
         return redirect('/login');
     }
@@ -34,7 +34,7 @@ class PesananController extends Controller
                 $data = [
                     "pesanans" => Pesanan::where('user_id', $userid)->get()
                 ];
-                return view('reservasi', $data);
+                return view('pages.pesanan', $data);
             }
             return redirect('/login');
         }
