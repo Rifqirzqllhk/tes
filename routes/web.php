@@ -26,7 +26,6 @@ Route::view('/signup', 'pages.registrasi');
 Route::post('/signed', [UserController::class, 'create']);
 Route::post('/prosesLogin', [UserController::class, 'cekUser']);
 Route::get('/logout', [UserController::class, 'logout']);
-Route::get('/pesanans', [UserController::class, 'index']);
 
 // route admin
 Route::get('/admin', [BukuController::class, 'index']);
@@ -53,4 +52,4 @@ Route::get('/admin/transaksi/{id}', [PesananController::class, 'adminShow']);
 Route::get('/pesanans', [PesananController::class, 'index']);
 
 // routing buku
-Route::get('/detail/{id}', [BukuController::class,'detail']);
+Route::get('/detail/{id}', [BukuController::class, 'detail']);

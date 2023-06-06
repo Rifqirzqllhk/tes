@@ -30,7 +30,7 @@
         <td scope="col">{{ $pesanan->user->email }}</td>
         <td scope="col">{{ $pesanan->buku->title }}</td>
         <td scope="col">{{ $pesanan->buku->genre->genre }}</td>
-        <td scope="col"><img src="img/{{ $pesanan->buku->cover }}" alt="" style="width: 50\px;"></td>
+        <td scope="col"><img src="/img/{{ $pesanan->buku->cover }}" alt="cover" style="width: 50px;"></td>
         <td scope="col">Rp {{ $pesanan->buku->price }}</td>
         <td scope="col"><a class="btn btn-success" href="/pesanan/{{ $pesanan->id }}">Print</a></td>
       </tr>
