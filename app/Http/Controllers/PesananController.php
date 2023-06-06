@@ -23,9 +23,9 @@ class PesananController extends Controller
     {
         if (Session::has('user_id')) {
             $data = [
-                "pesanans" => Pesanan::where('id', $id)->where('user_id', Session::get('user_id'))->first()
+                "pesanan" => Pesanan::where('id', $id)->where('user_id', Session::get('user_id'))->first()
             ];
-            return view('invoice', $data);
+            return view('pages.invoice', $data);
         }
         return redirect('/login');
     }
