@@ -5,6 +5,8 @@ use App\Http\Controllers\LandingController;
 use App\Http\Controllers\BukuController;
 use App\Http\Controllers\GenreController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\PesananController;
+use App\Models\Pesanan;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +26,8 @@ Route::view('/signup', 'pages.registrasi');
 Route::post('/signed', [UserController::class, 'create']);
 Route::post('/prosesLogin', [UserController::class, 'cekUser']);
 Route::get('/logout', [UserController::class, 'logout']);
+Route::get('/invoice/{id}', [PesananController::class, 'show']);
+
 
 // route admin
 Route::get('/admin', [BukuController::class, 'index']);
@@ -42,3 +46,12 @@ Route::post('/edit/isadmin/{id}', [userController::class, 'setIsAdmin']);
 Route::get('/drama', [GenreController::class, 'indexDrama']);
 Route::get('/horror', [GenreController::class, 'indexHorror']);
 Route::get('/action', [GenreController::class, 'indexAction']);
+
+// route pesanan
+Route::post('/prosesPemesanan', [PesananController::class, 'create']);
+Route::get('/pesanan/{id}', [PesananController::class, 'show']);
+Route::get('/admin/transaksi/{id}', [PesananController::class, 'adminShow']);
+Route::get('/pesanans', [PesananController::class, 'index']);
+
+// routing buku
+Route::get('/detail/{id}', [BukuController::class,'detail']);

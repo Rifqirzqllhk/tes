@@ -11,7 +11,7 @@
                 {!! \Session::get('success') !!}
             </div>
         @endif
-        <a href="/admin/addBuku" class="btn btn-primary mb-2">Add Komik</a>
+        <a href="/admin/addBuku" class="btn btn-primary mb-2">+ Tambahkan Buku</a>
         <table class="table table-striped">
             <thead>
                 <tr>
