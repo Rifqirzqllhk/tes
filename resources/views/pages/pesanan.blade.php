@@ -5,11 +5,11 @@
 
 @section('content')
 
-<div class="container mt-3" style="min-height: 580px;">
+<div class="container mt-3" style="min-height: 600px;">
   <div class="container">
     <p class="h2 mt-4 mb-4">Daftar Transaksi</p>
   </div>
-  <table class="table table-striped table-hover text-center ">
+  <table class="table table-striped table-hover text-center align-middle">
     <thead>
       <tr>
         <th scope="col">Reservation ID</th>
@@ -31,8 +31,8 @@
         <td scope="col">{{ $pesanan->buku->title }}</td>
         <td scope="col">{{ $pesanan->buku->genre->genre }}</td>
         <td scope="col"><img src="img/{{ $pesanan->buku->cover }}" alt="" style="width: 50\px;"></td>
-        <td scope="col">{{ $pesanan->buku->price }}</td>
-        <td scope="col"><a class="btn btn-success" href="/pesanans/{{ $pesanan->id }}">Print</a></td>
+        <td scope="col">Rp {{ $pesanan->buku->price }}</td>
+        <td scope="col"><a class="btn btn-success" href="/pesanan/{{ $pesanan->id }}">Print</a></td>
       </tr>
       @endforeach
     </tbody>
