@@ -50,3 +50,7 @@ Route::get('/action', [GenreController::class, 'indexAction']);
 Route::post('/prosesPemesanan', [PesananController::class, 'create']);
 Route::get('/pesanan/{id}', [PesananController::class, 'show']);
 Route::get('/admin/transaksi/{id}', [PesananController::class, 'adminShow']);
+Route::get('/pesanans', [PesananController::class, 'index']);
+
+// routing buku
+Route::get('/detail/{id}', [BukuController::class,'detail']);

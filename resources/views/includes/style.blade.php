@@ -31,3 +31,32 @@
 
     }
 </style>
+
+<style media="screen">
+    .form-question {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 0 3rem;
+        min-height: 3rem;
+    }
+
+    .form-question__title {
+        color: #342357;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    .input-container {
+        border-bottom: solid 1px #333333;
+        width: 89%;
+    }
+
+    .input-container input {
+        border: none;
+        box-sizing: border-box;
+        outline: 0;
+        padding: .75rem;
+        width: 100%;
+    }
+</style>

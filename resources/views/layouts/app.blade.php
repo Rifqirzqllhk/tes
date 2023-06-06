@@ -20,7 +20,9 @@
     @else
         @include('includes.navbar-login')
     @endif
+
     @yield('content')
+    
     @include('includes.footer')
 
     @stack('before-style')

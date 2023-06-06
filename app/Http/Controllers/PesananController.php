@@ -12,7 +12,7 @@ class PesananController extends Controller
     {
         if (Session::has('user_id')) {
             $data = [
-                'pesanan' => Pesanan::where('user_id', Session::get('user_id'))->get()
+                'pesanans' => Pesanan::where('user_id', Session::get('user_id'))->get()
             ];
             return view('pages.pesanan', $data);
         }
@@ -45,22 +45,16 @@ class PesananController extends Controller
     {
         if (Session::has('user_id')) {
             $date = strtotime($req->post('date'));
-            if ($req->post('durasi') == 14) {
-                $date = strtotime("+14 day", $date);
-            } else {
-                $date = strtotime("+7 day", $date);
-            }
             $date = date('Y-m-d', $date);
             $data = [
                 'user_id' => $_POST['user_id'],
                 'buku_id' => $_POST['buku_id'],
                 'quantity' => $_POST['quantity'],
-                'tanggal_pinjam' => $_POST['date'],
-                'tanggal_kembali' => $date,
-                'duration' => $_POST['durasi']
+                'tanggal_pinjam' => $_POST['tglpinjam'],
+                'tanggal_kembali' => $_POST['tglkembali']
             ];
             Pesanan::create($data);
-            return redirect('/prosesPemesanan');
+            return redirect('/pesanans');
         }
         return redirect('/login');
     }

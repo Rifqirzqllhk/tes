@@ -23,7 +23,7 @@
       </tr>
     </thead>
     <tbody>
-      @foreach ($pesanan as $pesanan)
+      @foreach ($pesanans as $pesanan)
       <tr>
         <th scope="col">{{ $pesanan->id }}</th>
         <td scope="col">{{ $pesanan->user->name }}</td>
