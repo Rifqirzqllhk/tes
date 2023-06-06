@@ -69,7 +69,7 @@ class BukuController extends Controller
             $data = [
                 'bukus' => Buku::where('id', $id)->first()
             ];
-            return view('halaman-detail-buku', $data);
+            return view('/katalog', $data);
         }
         return redirect('/login');
     }
@@ -120,5 +120,16 @@ class BukuController extends Controller
     {
         Buku::destroy($id);
         return redirect('/admin')->with('success', 'Buku berhasil dihapus');
+    }
+
+    public function detail($id)
+    {
+        if(Session::has('user_id')){
+            $data = [
+                'buku' => Buku::where('id', $id)->first()
+            ];
+            return view('pages.katalog',$data);
+        }
+        return redirect('/login');
     }
 }

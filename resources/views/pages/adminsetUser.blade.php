@@ -41,7 +41,7 @@
                                     <button class="btn btn-danger">Delete</button>
                                 </form>
                             @endif
-                            <a href="/admin/transaction/{{ $user->id }}" class="btn btn-primary">transactions</a>
+                            <a href="/admin/transaksi/{{ $user->id }}" class="btn btn-primary">transactions</a>
                         </td>
                     </tr>
                 @endforeach

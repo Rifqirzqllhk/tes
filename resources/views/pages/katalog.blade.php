@@ -6,17 +6,17 @@
 @section('content')
 
 <section>
-    <div class="container">
+    <div class="container vh-100">
         <div class="row">
             <div class="col">
-                <img src="../img/{{ $Buku->cover }}" width="400" height="500">
+                <img src="../img/{{ $buku->cover }}" width="400" height="500">
             </div>
             <div class="col">
-                <h2><br><br>{{$Buku->title}} | {{$Buku->genre}}</h2>
-                <h4>{{$Buku->price}}</h4>
+                <h2><br><br>{{$buku->title}} | {{$buku->genre->genre}}</h2>
+                <h4>Rp {{$buku->price}}</h4>
                 <hr width="80%" />
                 <b style="font-size: large;">Synopsis</b>
-                <p style="font-family:'Times New Roman'; font-size: 17px;">{{$Buku->sypnosis}}</p>
+                <p style="font-family:'Times New Roman'; font-size: 17px;">{{$buku->synopsis}}</p>
             </div>
             <div class="col">
                 <br><br>
