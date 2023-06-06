@@ -9,7 +9,7 @@
   <div class="container">
     <p class="h2 mt-4 mb-4">Daftar Transaksi</p>
   </div>
-  <table class="table table-striped table-hover lolz">
+  <table class="table table-striped table-hover text-center ">
     <thead>
       <tr>
         <th scope="col">Reservation ID</th>
@@ -23,16 +23,16 @@
       </tr>
     </thead>
     <tbody>
-      @foreach ($pesanan as $res)
+      @foreach ($pesanan as $pesanan)
       <tr>
-        <th scope="col">{{ $res->id }}</th>
-        <td scope="col">{{ $res->users->name }}</td>
-        <td scope="col">{{ $res->users->email }}</td>
-        <td scope="col">{{ $res->bukus->title }}</td>
-        <td scope="col">{{ $res->genres->genre-> }}</td>
-        <td scope="col"><img src="img/{{ $res->bukus->cover }}" alt="" style="width: 50px;"></td>
-        <td scope="col">{{ $res->bukus->price }}</td>
-        <td scope="col"><a class="btn btn-success" href="/pesanans/{{ $res->id }}">Print</a></td>
+        <th scope="col">{{ $pesanan->id }}</th>
+        <td scope="col">{{ $pesanan->user->name }}</td>
+        <td scope="col">{{ $pesanan->user->email }}</td>
+        <td scope="col">{{ $pesanan->buku->title }}</td>
+        <td scope="col">{{ $pesanan->buku->genre->genre }}</td>
+        <td scope="col"><img src="img/{{ $pesanan->buku->cover }}" alt="" style="width: 50\px;"></td>
+        <td scope="col">{{ $pesanan->buku->price }}</td>
+        <td scope="col"><a class="btn btn-success" href="/pesanans/{{ $pesanan->id }}">Print</a></td>
       </tr>
       @endforeach
     </tbody>

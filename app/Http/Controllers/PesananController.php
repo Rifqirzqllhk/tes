@@ -23,20 +23,20 @@ class PesananController extends Controller
     {
         if (Session::has('user_id')) {
             $data = [
-                "res" => Pesanan::where('id', $id)->where('user_id', Session::get('user_id'))->first()
+                "pesanan" => Pesanan::where('id', $id)->where('user_id', Session::get('user_id'))->first()
             ];
             return view('invoice', $data);
         }
+        return redirect('/login');
+    }
 
-        function adminShow($userid)
-        {
-            if (Session::has('user_id')) {
-                $data = [
-                    "pesanan" => Pesanan::where('user_id', $userid)->get()
-                ];
-                return view('pages.pesanan', $data);
-            }
-            return redirect('/login');
+    function adminShow($id)
+    {
+        if (Session::has('user_id')) {
+            $data = [
+                "pesanan" => Pesanan::where('id', $id)->get()
+            ];
+            return view('pages.pesanan', $data);
         }
         return redirect('/login');
     }
@@ -60,7 +60,7 @@ class PesananController extends Controller
                 'duration' => $_POST['durasi']
             ];
             Pesanan::create($data);
-            return redirect('/pesanan');
+            return redirect('/prosesPemesanan');
         }
         return redirect('/login');
     }
