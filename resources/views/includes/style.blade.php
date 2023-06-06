@@ -30,4 +30,9 @@
         color: white;
 
     }
+
+    .lolz{
+        vertical-align: middle;
+    }
+
 </style>
