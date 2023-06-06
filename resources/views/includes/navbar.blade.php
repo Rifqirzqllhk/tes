@@ -22,7 +22,7 @@
                 </li>
             </ul>
             <div class="d-flex ">
-                <a class="navbar-nav nav-link nav-item" href="/logout">Logout</a>
+                <a href="/logout" class="btn" id="button-logout" aria-current="page">logout</a>
             </div>
         </div>
     </div>
