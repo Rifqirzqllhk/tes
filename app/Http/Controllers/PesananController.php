@@ -12,7 +12,7 @@ class PesananController extends Controller
     {
         if (Session::has('user_id')) {
             $data = [
-                'pesanans' => pesanan::where('user_id', Session::get('user_id'))->get()
+                'pesanan' => Pesanan::where('user_id', Session::get('user_id'))->get()
             ];
             return view('pages.pesanan', $data);
         }
@@ -32,7 +32,7 @@ class PesananController extends Controller
         {
             if (Session::has('user_id')) {
                 $data = [
-                    "pesanans" => Pesanan::where('user_id', $userid)->get()
+                    "pesanan" => Pesanan::where('user_id', $userid)->get()
                 ];
                 return view('pages.pesanan', $data);
             }
@@ -60,7 +60,7 @@ class PesananController extends Controller
                 'duration' => $_POST['durasi']
             ];
             Pesanan::create($data);
-            return redirect('/pesanans');
+            return redirect('/pesanan');
         }
         return redirect('/login');
     }

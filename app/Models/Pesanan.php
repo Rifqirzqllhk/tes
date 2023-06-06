@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Pesanan extends Model
 {
     use HasFactory;
-
-    use HasFactory;
     protected $guarded = ['id'];
   
     public function buku()
