@@ -48,7 +48,7 @@ Route::get('/action', [GenreController::class, 'indexAction']);
 
 // route pesanan
 Route::post('/prosesPemesanan', [PesananController::class, 'create']);
-Route::get('/pesanans/{id}', [PesananController::class, 'show']);
+Route::get('/pesanan/{id}', [PesananController::class, 'show']);
 Route::get('/admin/transaksi/{id}', [PesananController::class, 'adminShow']);
 
 // routing buku

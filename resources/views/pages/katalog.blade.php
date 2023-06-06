@@ -21,9 +21,9 @@
             <div class="col">
                 <br><br>
                 <h1>Booking Comic</h1>
-                <form action="/" method="post">
+                <form action="/prosesPemesanan}}" method="post">
                     <label for="text" class="form-label" Style="font-size: 19px; font-style: Segoe ui ; padding: 1rem;">Quantity</label>
-                    <input type="" id="text" class="form-control" style="width:371px">
+                    <input type="" id="text" class="form-control" style="width:370px">
                     <div class="form-text">
                     </div>
                     <div class="form-question mb-2">
@@ -44,9 +44,11 @@
                             <span class="bar"></span>
                         </div>
                     </div>
+                    <input type="hidden" name="buku_id" value="{{$buku->id}}">
+                    <input type="hidden" name="user_id" value="{{ Session::get('user_id')}}">
+                    <button type="submit" class="btn btn-primary" style="text-align: center;">Submit</button>
                 </form>
                 </select>
-                <button type="button" class="btn btn-primary" style="text-align: center;">Submit</button>
             </div>
         </div>
     </div>

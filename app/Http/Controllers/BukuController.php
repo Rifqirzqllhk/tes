@@ -127,7 +127,7 @@ class BukuController extends Controller
         if(Session::has('user_id')){
             $data = [
                 'buku' => Buku::where('id', $id)->first()
-            ];
+            ]; 
             return view('pages.katalog',$data);
         }
         return redirect('/login');
