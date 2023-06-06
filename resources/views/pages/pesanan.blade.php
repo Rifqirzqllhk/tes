@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <div class="container mt-3" style="min-height: 600px;">
+    <div class="container mt-3 vh-100" style="min-height: 600px;">
         <div class="container">
             <p class="h2 mt-4 mb-4">Daftar Transaksi</p>
         </div>
