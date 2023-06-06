@@ -19,8 +19,8 @@ use App\Http\Controllers\UserController;
 
 // route umum
 Route::get('/', [BukuController::class, 'index']);
-Route::get('/login', [LandingController::class, 'login'])->name('pages.login');
-Route::view('/signup', 'pages.registrasi')->name('pages.registrasi');
+Route::get('/login', [LandingController::class, 'login']);
+Route::view('/signup', 'pages.registrasi');
 Route::post('/signed', [UserController::class, 'create']);
 Route::post('/prosesLogin', [UserController::class, 'cekUser']);
 Route::get('/logout', [UserController::class, 'logout']);
