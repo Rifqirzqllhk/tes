@@ -26,6 +26,8 @@ Route::view('/signup', 'pages.registrasi');
 Route::post('/signed', [UserController::class, 'create']);
 Route::post('/prosesLogin', [UserController::class, 'cekUser']);
 Route::get('/logout', [UserController::class, 'logout']);
+Route::get('/invoice/{id}', [PesananController::class, 'show']);
+
 
 // route admin
 Route::get('/admin', [BukuController::class, 'index']);
