@@ -7,7 +7,7 @@
 
 <section>
     <div class="container vh-100">
-        <div class="row">
+        <div class="row my-3">
             <div class="col">
                 <img src="../img/{{ $buku->cover }}" width="400" height="500">
             </div>
@@ -20,7 +20,7 @@
             </div>
             <div class="col">
                 <br><br>
-                <h1>Booking Comic</h1>
+                <h1>Pinjam Buku</h1>
                 <form action="/prosesPemesanan" method="post">
                     @csrf
                     <label for="text" class="form-label" Style="font-size: 19px; font-style: Segoe ui;" padding: 1rem;">Quantity</label>
