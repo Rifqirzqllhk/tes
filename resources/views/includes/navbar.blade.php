@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-md">
     <div class="container">
         <a class="navbar-brand " href="/">
             <img src="{{ asset('assets/img/logo.png')}}" alt="Logo" width="30" height="30" class="d-inline-block align-top">
@@ -20,7 +20,12 @@
                         <a class="dropdown-item" href="/action">Action</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a href="/pesanans" class="nav-link"> MyPesanan </a>
+
+                </li>
             </ul>
+
             <div class="d-flex ">
                 <a href="/logout" class="btn" id="button-logout" aria-current="page">logout</a>
             </div>

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-md">
     <div class="container">
         <a class="navbar-brand " href="/">
             <img src="{{ asset('assets/img/logo.png')}}" alt="Logo" width="30" height="30" class="d-inline-block align-top">
@@ -19,6 +19,10 @@
                         <a class="dropdown-item" href="/horror">Horror</a>
                         <a class="dropdown-item" href="/action">Action</a>
                     </div>
+                </li>
+                <li class="nav-item">
+                    <a href="/pesanans" class="nav-link"> MyPesanan </a>
+
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">Menu Admin</a>
