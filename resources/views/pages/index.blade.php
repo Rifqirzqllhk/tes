@@ -47,4 +47,5 @@
 @endsection
 
 @push('after-style')
+
 @endpush
