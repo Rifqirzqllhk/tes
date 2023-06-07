@@ -7,7 +7,7 @@
 
 <section>
     <div class="container vh-100">
-        <div class="row my-3">
+        <div class="row">
             <div class="col">
                 <img src="../img/{{ $buku->cover }}" width="400" height="500">
             </div>

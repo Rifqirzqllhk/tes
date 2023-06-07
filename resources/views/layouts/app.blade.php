@@ -23,7 +23,7 @@
     @endif
 
     @yield('content')
-
+    
     @include('includes.footer')
 
     @stack('before-style')

@@ -17,9 +17,9 @@ class BukuController extends Controller
         $data = [
             'bukus' => Buku::all()
         ];
-        if ($request!=null) {
+        if ($request != null) {
             $titleSearch = $request->input('search');
-            $data['bukus'] = Buku::query()->where('title','LIKE',"%{$titleSearch}%")->get();
+            $data['bukus'] = Buku::query()->where('title', 'LIKE', "%{$titleSearch}%")->get();
         }
         return view('pages.index', $data);
     }
@@ -50,9 +50,9 @@ class BukuController extends Controller
         $inputBuku->genre_id = $request->input('genre_id');
         $inputBuku->price = $request->input('price');
         $inputBuku->cover = 'defaultimg.jpg';
-        if ($cover!=null) {
+        if ($cover != null) {
             $inputBuku->cover = $cover->getClientOriginalName();
-            $tujuan_upload = 'assets/img/';
+            $tujuan_upload = 'img/';
             $cover->move($tujuan_upload, $cover->getClientOriginalName());
         }
 
@@ -124,12 +124,10 @@ class BukuController extends Controller
 
     public function detail($id)
     {
-        if(Session::has('user_id')){
-            $data = [
-                'buku' => Buku::where('id', $id)->first()
-            ]; 
-            return view('pages.katalog',$data);
-        }
-        return redirect('/login');
+
+        $data = [
+            'buku' => Buku::where('id', $id)->first()
+        ];
+        return view('pages.katalog', $data);
     }
 }

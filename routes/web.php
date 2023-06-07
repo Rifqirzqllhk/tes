@@ -54,4 +54,4 @@ Route::get('/admin/transaksi/{id}', [PesananController::class, 'adminShow']);
 Route::get('/pesanans', [PesananController::class, 'index']);
 
 // routing buku
-Route::get('/detail/{id}', [BukuController::class,'detail']);
+Route::get('/detail/{id}', [BukuController::class, 'detail']);
