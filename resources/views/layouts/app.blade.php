@@ -3,6 +3,7 @@
 <head>
     @include('includes.meta')
 
+    <link rel="icon" href="{{ asset('assets/img/logo.png')}}" />
     <title>@yield('title')</title>
 
     @stack('before-style')
@@ -14,11 +15,11 @@
 
 <body>
     @if (Session::has('admin'))
-        @include('includes.navbar-admin')
+    @include('includes.navbar-admin')
     @elseif(Session::has('user_id'))
-        @include('includes.navbar')
+    @include('includes.navbar')
     @else
-        @include('includes.navbar-login')
+    @include('includes.navbar-login')
     @endif
 
     @yield('content')

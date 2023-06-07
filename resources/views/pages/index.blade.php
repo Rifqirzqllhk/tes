@@ -32,8 +32,8 @@
                 <div class="card " style="width: 15rem;">
                     <img src="img/{{ $Buku->cover }}" width="150" class="card-img-top" alt="" srcset="">
                     <div class="card-body">
-                        <h5 class="card-title text-truncate">{{$Buku->title }}</h5>
-                        <p class="card-text text-truncate">{{$Buku->synopsis}}</p>
+                        <h5 class="card-title text-truncate">{{ $Buku->title }}</h5>
+                        <p class="card-text text-truncate">{{ $Buku->synopsis }}</p>
                         <a href="/detail/{{ $Buku->id }}" class="btn btn-primary">Lihat</a>
                     </div>
                 </div>
