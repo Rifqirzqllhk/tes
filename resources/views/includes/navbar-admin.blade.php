@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-md">
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
     <div class="container">
         <a class="navbar-brand " href="/">
             <img src="{{ asset('assets/img/logo.png')}}" alt="Logo" width="30" height="30" class="d-inline-block align-top">

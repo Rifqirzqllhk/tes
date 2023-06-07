@@ -7,7 +7,7 @@
 
     <section>
         <div class="container">
-            <div class="row">
+            <div class="row my-4">
                 <div class="col"></div>
                 <div class="col-8">
                     <div class="row justify-content-center">

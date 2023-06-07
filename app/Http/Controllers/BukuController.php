@@ -52,7 +52,7 @@ class BukuController extends Controller
         $inputBuku->cover = 'defaultimg.jpg';
         if ($cover != null) {
             $inputBuku->cover = $cover->getClientOriginalName();
-            $tujuan_upload = 'assets/img/';
+            $tujuan_upload = 'img/';
             $cover->move($tujuan_upload, $cover->getClientOriginalName());
         }
 
